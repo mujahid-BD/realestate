@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Real Estate Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header fixed">
+        <div class="container">
+            <div class="logo">JJ Pvt Ltd</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn discord-btn"><i class="fab fa-discord"></i> Join Discord</button>
+                <button class="btn theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section-->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Dream Home</h1>
+            <p>Premium properties tailored to your lifestyle</p>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search properties...">
+                <button class="btn search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="properties">
+        <div class="container">
+            <h2>Our Properties</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="available">Available</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+                <button class="filter-btn" data-filter="apartment">Apartments</button>
+            </div>
+            <div class="property-grid" id="property-grid">
+                <!-- Properties will be dynamically inserted here -->
+            </div>
+            <div class="loading" id="loading">Loading properties...</div>
+            <div class="error" id="error">Error loading properties. Please try again.</div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid" id="team-grid">
+                <!-- Team members will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Premium Real Estate Agency. All rights reserved । Developed by <a href="https://mujahid.shopmebd.com" target="_self">Mujahid Shohan</a></p>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h3>Property Details</h3>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
